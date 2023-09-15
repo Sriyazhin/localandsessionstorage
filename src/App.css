@@ -1,0 +1,162 @@
+.fullbackground {
+  background-color: #355B3E;
+  height: 747px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginbox {
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: white;
+}
+
+.logoandtitlehere {
+  display: flex;
+  width: 330px;
+  margin-top: 18px;
+}
+.logoandtitlehere .logopart {
+  margin-left: 33px;
+}
+.logoandtitlehere .titlepart {
+  font-size: 27px;
+  color: #355B3E;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.artificialandwelcome {
+  color: #355B3E;
+  width: 330px;
+}
+.artificialandwelcome .artificial {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 18px;
+  margin-left: 33px;
+}
+.artificialandwelcome .welcomeback {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 33px;
+}
+
+.forform .formhere {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.forform .formhere .forlabel {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 33px;
+  margin-bottom: 5px;
+}
+.forform .formhere .forinputbox {
+  border: 1px solid #B8D6BF;
+  height: 30px;
+  width: 240px;
+  margin-left: 33px;
+  border-radius: 5px;
+}
+.forform .rememberandforgot {
+  display: flex;
+  justify-content: center;
+  width: 310px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.forform .rememberandforgot .remember {
+  font-size: 12px;
+}
+.forform .rememberandforgot .forgot {
+  margin-left: 63px;
+  font-size: 11px;
+}
+.forform .loginandsignin {
+  margin-top: 10px;
+  width: 310px;
+  display: flex;
+  justify-content: center;
+}
+.forform .loginandsignin .login {
+  width: 110px;
+  background-color: #029664;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  height: 30px;
+}
+.forform .loginandsignin .signin {
+  margin-left: 24px;
+  width: 110px;
+  border: 1px solid #029664;
+  background-color: white;
+  color: #029664;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.loginlinks {
+  margin-left: 34px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.rightimagepart {
+  background-color: #F5DBC4;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 405.6px;
+  width: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#forsignin {
+  height: 462px;
+}
+
+.forhomepage {
+  width: 300px;
+}
+
+.welcometitle {
+  font-size: 27px;
+  color: #355B3E;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
+.thejourney {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.logouthere {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.logoutbutton {
+  border: none;
+  background-color: #355B3E;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+#forhome {
+  height: 226.5px;
+  width: 300px;
+}/*# sourceMappingURL=App.css.map */
