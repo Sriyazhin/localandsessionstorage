@@ -1,10 +1,9 @@
 
 import daytravel from './assets/images/daytravel.png';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Home = () =>{
-    const username = JSON.parse(localStorage.getItem("input"));
-    // const username = JSON.parse(sessionStorage.getItem("input"));
+    let currentname=useParams();
     const navigate = useNavigate();
     
     const handlelogout = () =>{
@@ -18,7 +17,7 @@ const Home = () =>{
     <div className="loginbox">
         <div className="forhomepage leftloginpart">
             <div className="logoandtitlehere">
-                <div className="welcometitle">Welcome {username.name}!</div>
+                <div className="welcometitle">Welcome {currentname.name}!</div>
             </div>
             <div className='thejourney'>“The journey of a thousand miles begins with a single step.”</div>
             <div className='logouthere'><button className='logoutbutton' onClick={handlelogout}>Logout</button></div>
