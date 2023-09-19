@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import { useNavigate } from "react-router-dom";
 import './App.css';
 import logoss from './assets/images/Logo.png';
@@ -6,18 +6,21 @@ import loginlinks from './assets/images/Frame 17.png';
 import daytravel from './assets/images/daytravel.png';
 
 const Signin = ()=> {
-    const [user,setUser] = useState({
-        name:'',
-        email:'',
-        password:'',
-    });
+    const [user,setUser] = useState('');
+    
     const navigate = useNavigate();
-
- const handlesubmit = () => {
-    if(user.name&&user.email&&user.password){
-    localStorage.setItem('input',JSON.stringify(user));
-    // sessionStorage.setItem('input',JSON.stringify(user));
+    
+ const handlesubmit = (e) => {
+    e.preventDefault();
+    if(user.name&&user.email&&user.password){ 
+        var userarray = JSON.parse(localStorage.getItem('input') || '[]');
+        userarray.push(user);
+    localStorage.setItem('input',JSON.stringify(userarray));
+    
     navigate('/');
+    alert('Registration Successful!!')
+    // sessionStorage.setItem('input',JSON.stringify(user));
+   
     } else {
         alert('Enter valid details');
     }
