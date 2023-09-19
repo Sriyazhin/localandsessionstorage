@@ -16,29 +16,50 @@ const Login = () =>{
     
     
     //localStorage.setItem({'username':'testt','password':'tort'});
-
+  
  const handlesubmit = (e) => {
     e.preventDefault();
     const newuser = JSON.parse(localStorage.getItem("input"));
     // const newuser = JSON.parse(sessionStorage.getItem("input"));
+    var finduser; 
     
-    if((user.email===newuser.email)&&(user.password===newuser.password)){
-        localStorage.setItem('isAuth',true);
+    if(!newuser){
+        alert('No records found! Singin first!');
+        return;
+    } else{
+        finduser = newuser.find((nu)=>nu.email===user.email&&nu.password===user.password)
+    }
+    if(finduser){
+        localStorage.setItem('isAuth',"true");
         // sessionStorage.setItem('isAuth',true);
         
     }else{
-        localStorage.setItem('isAuth',false);
+        localStorage.setItem('isAuth',"false");
         // sessionStorage.setItem('isAuth',false);
         alert("Invalid username or password!")
     }    
 
-    if(localStorage.getItem('isAuth')){
-        navigate('/home');
+    
+    if(localStorage.getItem('isAuth')==="true"){
+        let n
+        newuser.find((nu)=>{
+            
+            if(nu.email===user.email&&nu.password===user.password){
+                n = nu.name;
+            }
+            return n;
+        })
+        console.log(n,'name')
+        navigate(`/home/${n}`);
+        
     }
+
+    }
+    
     // if(sessionStorage.getItem('isAuth')){
     //     navigate('/home');
     // }
- }
+ 
 
  const handlesignin = () => {
     navigate('/signin');
